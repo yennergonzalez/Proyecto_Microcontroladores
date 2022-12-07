@@ -134,9 +134,9 @@ void loop()
   SensorHG_2 = analogRead(A1);
   SensorHG_3 = analogRead(A2);
 
-  SensorHG_1m = map(SensorHG_1, 600, 820, 0, 100);
-  SensorHG_2m = map(SensorHG_2, 140, 310, 0, 100);
-  SensorHG_3m = map(SensorHG_3, 635, 820, 0, 100);
+  SensorHG_1m = map(SensorHG_1, 615, 760, 0, 100);
+  SensorHG_2m = map(SensorHG_2, 140, 350, 0, 100);
+  SensorHG_3m = map(SensorHG_3, 650, 750, 0, 100);
 
   if (SensorHG_1m < 0){
     RemoteXY.DatoHumo_var1 = 0;
@@ -156,13 +156,13 @@ void loop()
   if (SensorHG_3m > 100){
     RemoteXY.DatoHumo_var3 = 100;
   }
-  if (SensorHG_1m > 0 && SensorHG_1m < 100){
+  if (SensorHG_1m > 0 && SensorHG_1m < 100){ //rojo
     RemoteXY.DatoHumo_var1 = SensorHG_1m;
   }
-  if (SensorHG_2m > 0 && SensorHG_2m < 100){
+  if (SensorHG_2m > 0 && SensorHG_2m < 100){ //verde
     RemoteXY.DatoHumo_var2 = SensorHG_2m;
   }
-  if (SensorHG_3m > 0 && SensorHG_3m < 100){
+  if (SensorHG_3m > 0 && SensorHG_3m < 100){ //amarillo
     RemoteXY.DatoHumo_var3 = SensorHG_3m;
   } 
 }
